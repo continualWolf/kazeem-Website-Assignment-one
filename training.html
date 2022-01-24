@@ -48,6 +48,11 @@ color:#e63c3c;
 cursor:pointer;
 background-size: 100% 2px;
 }
+.flex-container button{
+float:right;
+margin-left:auto;
+margin-right:0.3em;
+}
 body{
 background-color: #121212;
 }
@@ -80,17 +85,6 @@ transition: all 550ms ease;
 }
 .cv-button:Hover{
 text-shadow: -1px 1px 1px #000000;
-}
-.fa-moon{
-	padding-top:0.3em;
-	padding-bottom:0.1em;
-	padding-left:0.5em;
-	padding-right:0.5em;
-	margin-left: auto;
-}
-.fa-moon:hover{
-	color: #e63c3c;
-	cursor: pointer;
 }
 @media only screen and (max-width: 600px){
 	.flex-container li{
@@ -132,17 +126,18 @@ color:white;
 font-family: 'Inconsolata', monospace;
 }
 .intro-text{
-text-align:center;
+text-align:left;
 font-weight:normal;
 padding-top:0em;
 font-size:3.8rem;
+font-family: 'Raleway', sans-serif;
 }
 .intro-text-sub{
-text-align:center;
+text-align:left;
 font-weight:normal;
 padding-top:1em;
 padding-bottom:1em;
-font-size:3rem;
+font-size:2.3rem;
 }
 .hamburger-line{
 border-top:2px solid white;
@@ -194,6 +189,7 @@ background-size: 90% 2px;
 .home-section-one{
 padding-top:16em;
 padding-bottom:20em;
+padding-left: 3em;
 text-align:center;
 }
 .home-section-one .fa-chevron-down{
@@ -210,27 +206,6 @@ padding-bottom:6em;
 background-color: rgba(255,255,255,9%);
 box-shadow: 1px 0px 15px #000000;
 }
-.home-sec-two-flex{
-display:flex;
-justify-content:center;
-flex-direction:row;
-}
-.home-sec-two-flex div{
-max-width:25%;
-max-height:20em;
-flex:33%;
-padding:3em;
-}
-.home-sec-two-flex img{
-height:100%;
-object-fit:cover;
-box-shadow: 5px 5px 15px #000000;
-transition: all 900ms ease;
-}
-.home-sec-two-flex img:Hover{
-scale:120%;
-cursor:pointer;
-}
 .home-section-three{
 	padding-top:12em;
 	padding-bottom:12em;
@@ -241,44 +216,6 @@ cursor:pointer;
 }
 .home-section-three h3{
 	font-weight: bold;
-}
-.item1{ grid-area: pages; }
-.item2{ grid-area: images; }
-.item3{ grid-area: menu; }
-.item4{ grid-area: tutorials; }
-.item5{ grid-area: docs; }
-.item6{ grid-area: test; }
-.grid-container{
-    display: grid;
-    grid-template-areas:
-        'pages pages menu menu tutorials tutorials'
-        'pages pages menu menu tutorials tutorials'
-		'images images docs docs test test'
-        'images images docs docs test test';
-    padding:3em;
-    height:50vh;
-	grid-gap:10px;
-    background-color: #121212;
-    color: rgba(255,255,255,60%);
-    padding-right:20em;
-	padding-left: 20em;
-    }
-.grid-container > div {
-    padding:1em;
-    position:relative;
-	text-align: left;
-}
-.grid-container h5{
-	color: white;
-}
-.grid-container .fas{
-	font-size: 2.5rem;
-	color:#ffffff83;
-}
-
-.grid-container .far{
-	font-size: 2.5rem;
-	color:#ffffff83;
 }
 /* The Modal (background) */
 .modal {
@@ -320,6 +257,23 @@ cursor:pointer;
   text-decoration: none;
   cursor: pointer;
 }
+.intro-button{
+	float: left;
+	background: transparent;
+	border : 2px solid #e63c3c;
+	border-radius: 3px;
+	padding-left:1.2em;
+	padding-right:1.2em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	color: #ffffff;
+	font-weight: bold;
+	transition: all 1100ms ease;
+	transform-origin: center;
+}
+.intro-button:Hover{
+	background: #e63c3c;
+}
 </style>
 <body>
 
@@ -328,8 +282,7 @@ cursor:pointer;
 <a href="../KazeemWebsiteAssignment/index.html"><li>Home</li></a>
 <li>About</li>
 <li>Events</li>
-<a href="../KazeemWebsiteAssignment/training.html"><li>Training</li></a>
-<i class="far fa-moon" onclick="toggleLight()"></i>
+<li>Training</li>
 <button class="cv-button" id="myBtn"><span class="cv-button-text">Contact Us</span></button>
 <div onclick="OpenMenu()" class="hamburger">
 <div class="hamburger-line"></div>
@@ -351,86 +304,14 @@ cursor:pointer;
 	<div class="home-section-one">
 		<h1 class="intro-text">Hello! Welcome</h1>
 		<h3 class="intro-text-sub">This is the Banntech Information site</h3>
-		<a href="#homeItemTwo"><i class="fas fa-chevron-down"></i></a>
+		<button class="intro-button">Click Me</button>
+		<!-- <a href="#homeItemTwo"><i class="fas fa-chevron-down"></i></a> -->
 	</div>
 	<div class="home-section-two">
-		<div class="home-sec-two-flex" id="homeItemTwo">
-			<div class="flex-one"><img src="../KazeemWebsiteAssignment/Images/original.jpg" /></div>
-			<div class="flex-one"><img src="../KazeemWebsiteAssignment/Images/original.jpg" /></div>
-			<div class="flex-one"><img src="../KazeemWebsiteAssignment/Images/original.jpg" /></div>
-		</div>
+	
 	</div>
 	<div class="home-section-three">
-		<h3>blah blah</h3>
-		<h4>this is just somw filler text, sa hello world!</h4>
-		<div class="grid-container">
-			<div class="item1">
-				<div class="row">
-					<div class="col-md-2" style="padding: none;">
-						<i class="far fa-calendar-alt"></i>
-					</div>
-					<div class="col-md-10">
-						<h5>Work Days</h5>
-						<p>tseting testing oen two three</p>
-					</div>
-				</div>
-			</div>
-			<div class="item2">
-				<div class="row">
-					<div class="col-md-2" style="padding: none;">
-						<i class="far fa-clock"></i>
-					</div>
-					<div class="col-md-10">
-						<h5>Flexi-Time</h5>
-						<p>tseting testing oen two three</p>
-					</div>
-				</div>
-			</div>
-			<div class="item3">
-				<div class="row">
-					<div class="col-md-2" style="padding: none;">
-						<i class="fas fa-passport"></i>
-					</div>
-					<div class="col-md-10">
-						<h5>Holidays</h5>
-						<p>tseting testing oen two three</p>
-					</div>
-				</div>
-			</div>
-			<div class="item4">
-				<div class="row">
-					<div class="col-md-2" style="padding: none;">
-						<i class="fas fa-hand-holding-usd"></i>
-					</div>
-					<div class="col-md-10">
-						<h5>Pay</h5>
-						<p>tseting testing oen two three</p>
-					</div>
-				</div>
-			</div>
-			<div class="item5">
-				<div class="row">
-					<div class="col-md-2" style="padding: none;">
-						<i class="fas fa-comment-dollar"></i>
-					</div>
-					<div class="col-md-10">
-						<h5>Bonus</h5>
-						<p>tseting testing oen two three</p>
-					</div>
-				</div>
-			</div>
-			<div class="item6">
-				<div class="row">
-					<div class="col-md-2" style="padding: none;">
-						<i class="far fa-calendar-alt"></i>
-					</div>
-					<div class="col-md-10">
-						<h5>Learn More ...</h5>
-						<p>tseting testing oen two three</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 </div>
 <div id="myModal" class="modal">
@@ -495,11 +376,6 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
-function toggleLight(){
-	alert("testing testing 123");
-	var background = document.getElementsByClassName("flex-container")[0];
-	document.body.style.backgroundColor = "rgba(0,0,0,6%)";
 }
 </script>
 </html> 
