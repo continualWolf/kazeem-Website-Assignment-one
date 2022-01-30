@@ -274,6 +274,27 @@ box-shadow: 1px 0px 15px #000000;
 .intro-button:Hover{
 	background: #e63c3c;
 }
+.intro-button-two{
+	float: left;
+	background: #e63c3c;
+	padding-left:1.2em;
+	padding-right:1.2em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	color: #ffffff;
+	font-weight: bold;
+	border-right: 10px solid #3ce6e6;
+	border-top:none;
+	border-bottom: none;
+	border-left: none;
+}
+.intro-button-two:Hover{
+	background:white;
+	color: #e63c3c;
+}
+#wizard{
+	position: relative;
+}
 </style>
 <body>
 
@@ -304,10 +325,14 @@ box-shadow: 1px 0px 15px #000000;
 	<div class="home-section-one">
 		<h1 class="intro-text">Hello! Welcome</h1>
 		<h3 class="intro-text-sub">This is the Banntech Information site</h3>
-		<button class="intro-button">Click Me</button>
+		<!-- <button class="intro-button">Click Me</button> -->
+		<button class="intro-button-two">Click Me</button>
 		<!-- <a href="#homeItemTwo"><i class="fas fa-chevron-down"></i></a> -->
 	</div>
 	<div class="home-section-two">
+		<img src="../kazeem-Website-Assignment-one/Images/pixel-speech-bubble.gif" style="width:45em;">
+		<br > 
+	<img src="../kazeem-Website-Assignment-one/Images/giphy.gif" alt="Cat" id="wizard"/>
 	
 	</div>
 	<div class="home-section-three">
@@ -379,5 +404,43 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }	
+
+window.addEventListener('keydown', (e) => {
+	console.log(e);
+	if(e.key == 'd'){
+		var wiz = document.getElementById("wizard");
+		var temp = Number(wiz.style.marginLeft.replace('px', ''));
+		temp = temp + 4;
+		//alert(temp);
+		let newLeft = temp +"px";
+		wiz.style.marginLeft = newLeft;
+		
+	}
+	if(e.key == 'a'){
+		var wiz = document.getElementById("wizard");
+		var temp = Number(wiz.style.marginLeft.replace('px', ''));
+		temp = temp - 4;
+		//alert(temp);
+		let newLeft = temp +"px";
+		wiz.style.marginLeft = newLeft;
+	}
+	if(e.key == 'w'){
+		var wiz = document.getElementById("wizard");
+		var temp = Number(wiz.style.marginBottom.replace('px', ''));
+		temp = temp - 4;
+		//alert(temp);
+		let newLeft = temp +"px";
+		wiz.style.marginBottom = newLeft;
+	}
+})
+window.onload = function(){
+	var wiz = document.getElementById("wizard");
+		//let temp = wiz.style.marginLeft + 1;
+		//let newLeft = temp +"px";
+		wiz.style.right = "0";
+}
+window.dispatchEvent(new KeyboardEvent('keydown', {
+	'key' : 'ArrowRight'
+}));
 </script>
 </html> 
