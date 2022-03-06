@@ -13,13 +13,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Raleway:ital@1&display=swap" rel="stylesheet">
- <link href="toastr.css" rel="stylesheet"/>
- <script src="toastr.js"></script>
- <link rel="stylesheet" href="../kazeem-Website-Assignment-one/train.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Raleway:ital@1&display=swap" rel="stylesheet">
+  <link href="toastr.css" rel="stylesheet"/>
+  <script src="toastr.js"></script>
+  <link rel="stylesheet" href="../kazeem-Website-Assignment-one/train.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"> 
 </head>
 <style>
 
@@ -53,17 +53,87 @@
 		<h1 class="intro-text">Hello! Welcome</h1>
 		<h3 class="intro-text-sub">This is the Banntech Information site</h3>
 		<!-- <button class="intro-button">Click Me</button> -->
-		<button class="intro-button-two">Click Me</button>
+		<a href="#role"><button class="intro-button-two" >Click Me</button></a>
 		<!-- <a href="#homeItemTwo"><i class="fas fa-chevron-down"></i></a> -->
 	</div>
-	<div class="home-section-two">
-		<h3>What role are you in?</h3>
-		<a>Software Developer</a>
-		<a>Sales</a>
-		<a>Apprentice</a>
+	<div class="home-section-two role-options" id="role">
+		<h2>What role are you in?</h2>
+		<hr>
+		<a href="#software-dev">Software Developer</a>
+		<a href="#sales">Sales</a>
+		<a href="#apprentice">Apprentice</a>
 	</div>
-	<div class="home-section-three">
-		
+	<div class="home-section-three row" id="software-dev">
+		<div class="col-md-6">
+			<h2>Hello new Software Developer</h2>
+			<hr>
+			<p>Welcome to banntech new developer we are excited for you to start working!</p>
+			<p>You will be using some of the following languages and frameworks when you start:</p>
+			<ul style="text-align: left;">
+				<li>C#
+					<ul>
+						<li>MVC framework</li>
+						<li>.NET 3</li>
+					</ul>
+				</li>
+				<li>JavaScript
+					<ul>
+						<li>Jquery</li>
+						<li>TypeScript</li>
+					</ul>
+				</li>
+				<li>HTML & CSS</li>
+			</ul>
+			<p>It's okay if you don't know any of these languages! We will provide the some time , means and help from other experienced developers so you can learnwhatever it is you're missing from the list &#128513;</p>
+		</div>
+		<div class="col-md-6">
+			<img src="../kazeem-Website-Assignment-one/Images/softwareDev.jpg" alt="Women Programming" title="Women Programming">
+		</div>
+	</div>
+	<div class="home-section-three row" id="sales">
+		<div class="col-md-6">
+			<img src="../kazeem-Website-Assignment-one/Images/Sales.jpg" title="Sales">
+		</div>
+		<div class="col-md-6">
+			<h2>Hello new Sales Employee</h2>
+			<hr>
+			<h5>CONGRADULATIONS! You got the sales job &#127881;</h5>
+			<h5>But what now?</h5>
+			<p>At banntech we use alot of different software from Excell to word to our in house CRMs here is a list of the software you need to install</p>
+			<ul>
+				<li>Microsoft
+					<ul>
+						<li>Power Point</li>
+						<li>Office</li>
+						<li>Excell</li>
+						<li>Word</li>
+						<li>Access</li>
+						<li>SQL sever manager</li>
+					</ul>
+				</li>
+				<li>Transpose</li>
+			</ul>
+			<p>After you have installed all the items in the list please report to Olwiva the Office Manager she will let you know what you need to do next.</p>
+			<h5>Good Luck!&#128513</h5>
+		</div>
+	</div>
+	<div class="home-section-three row" id="apprentice">
+		<div class="col-md-6">
+			<h2>So you're an Apprentice @ Banntech</h2>
+			<p>Now the hard work begins</p>
+			<p>You will be given a mentor and certain days of the week to study</p>
+			<p>You will be expected to learn</p>
+			<ul>
+				<li>C#</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>Java Script</li>
+			</ul>
+			<p>But don't worry everyone in the company is here to help! work hard and good luck!</p>
+		</div>
+		<div class="col-md-6">
+			<img src="../kazeem-Website-Assignment-one/Images/So.gif">
+		</div>
 	</div>
 </div>
 <div id="myModal" class="modal">
@@ -96,6 +166,7 @@ function OpenMenu(){
 	if (test.style.opacity == "0") {
 test.style.width = "25em";
 test.style.opacity = "1";
+
 } else{
 		test.style.width = "0em";
 		test.style.opacity = "0";
@@ -131,43 +202,5 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }	
-
-window.addEventListener('keydown', (e) => {
-	console.log(e);
-	if(e.key == 'd'){
-		var wiz = document.getElementById("wizard");
-		var temp = Number(wiz.style.marginLeft.replace('px', ''));
-		temp = temp + 4;
-		//alert(temp);
-		let newLeft = temp +"px";
-		wiz.style.marginLeft = newLeft;
-		
-	}
-	if(e.key == 'a'){
-		var wiz = document.getElementById("wizard");
-		var temp = Number(wiz.style.marginLeft.replace('px', ''));
-		temp = temp - 4;
-		//alert(temp);
-		let newLeft = temp +"px";
-		wiz.style.marginLeft = newLeft;
-	}
-	if(e.key == 'w'){
-		var wiz = document.getElementById("wizard");
-		var temp = Number(wiz.style.marginBottom.replace('px', ''));
-		temp = temp - 4;
-		//alert(temp);
-		let newLeft = temp +"px";
-		wiz.style.marginBottom = newLeft;
-	}
-})
-window.onload = function(){
-	var wiz = document.getElementById("wizard");
-		//let temp = wiz.style.marginLeft + 1;
-		//let newLeft = temp +"px";
-		wiz.style.right = "0";
-}
-window.dispatchEvent(new KeyboardEvent('keydown', {
-	'key' : 'ArrowRight'
-}));
 </script>
 </html> 

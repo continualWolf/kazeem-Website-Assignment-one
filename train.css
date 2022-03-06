@@ -1,3 +1,6 @@
+:root{
+  --red: #e63c3c;
+}
 .flex-container{
     display:flex;
     flex-direction:row;
@@ -13,14 +16,14 @@
     box-shadow: 1px 2px 10px #000000;
     }
     .flex-container li{
-    background-image: linear-gradient(90deg, #e63c3c, #e63c3c);
+    background-image: linear-gradient(90deg, var(--red), var(--red));
     background-size: 0% 2px;
     background-repeat: no-repeat;
     background-position: bottom;
     transition: all 700ms ease;
     }
     .flex-container li:Hover{
-    color:#e63c3c;
+    color:var(--red);
     cursor:pointer;
     background-size: 100% 2px;
     }
@@ -49,7 +52,7 @@
     }
     .cv-button{
     border:none;
-    background-color: #e63c3c;
+    background-color: var(--red);
     border-radius: 8px;
     padding-top:0.1em;
     padding-bottom:0.1em;
@@ -151,14 +154,14 @@
     position:absolute;
     }
     .mobile-menu-list li{
-    background-image: linear-gradient(90deg, #e63c3c, #e63c3c);
+    background-image: linear-gradient(90deg, var(--red), var(--red));
     background-size: 0% 2px;
     background-repeat: no-repeat;
     background-position: bottom left;
     transition: all 650ms ease;
     }
     .mobile-menu-list li:Hover{
-    color:#e63c3c;
+    color:var(--red);
     cursor:pointer;
     background-size: 90% 2px;
     }
@@ -174,7 +177,7 @@
     }
     .home-section-one .fa-chevron-down:Hover{
     cursor:pointer;
-    color:#e63c3c;
+    color:var(--red);
     }
     .home-section-two{
     padding-top:6em;
@@ -185,7 +188,7 @@
     .home-section-three{
         padding-top:12em;
         padding-bottom:12em;
-        text-align: center;
+        text-align: left;
     }
     .home-section-three h4{
         color: rgba(255, 255, 255, 0.397);
@@ -237,7 +240,7 @@
     .intro-button{
         float: left;
         background: transparent;
-        border : 2px solid #e63c3c;
+        border : 2px solid var(--red);
         border-radius: 3px;
         padding-left:1.2em;
         padding-right:1.2em;
@@ -249,11 +252,11 @@
         transform-origin: center;
     }
     .intro-button:Hover{
-        background: #e63c3c;
+        background: var(--red);
     }
     .intro-button-two{
         float: left;
-        background: #e63c3c;
+        background: var(--red);
         padding-left:1.2em;
         padding-right:1.2em;
         padding-top: 0.3em;
@@ -267,8 +270,27 @@
     }
     .intro-button-two:Hover{
         background:white;
-        color: #e63c3c;
+        color: var(--red);
     }
     #wizard{
         position: relative;
+    }
+    .role-options{
+      text-align: center;
+      align-items: center;
+    }
+    .role-options h3{
+      text-align: center;
+    }
+    .role-options a{
+      text-align: center;
+      padding:3em;
+    }
+    .role-options a:hover{
+      text-decoration: underline var(--red) !important;
+      color: var(--red) !important;
+      cursor:pointer;
+    }
+    .home-section-three .col-md-6{
+      padding:7em;
     }
